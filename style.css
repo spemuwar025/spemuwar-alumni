@@ -1,0 +1,299 @@
+/* -------------------------- */
+/*      GENERAL STYLES        */
+/* -------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* -------------------------- */
+/*           NAVBAR           */
+/* -------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0165a3;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #004d7a;
+}
+
+.dark-btn {
+    background: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* -------------------------- */
+/*           SLIDER           */
+/* -------------------------- */
+
+.slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.slides {
+    display: none;
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+
+/* -------------------------- */
+/*    HEADER / HERO SECTION   */
+/* -------------------------- */
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #0165a3;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+/* -------------------------- */
+/*         MAIN CONTENT        */
+/* -------------------------- */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+h2 {
+    color: #0165a3;
+}
+
+
+/* -------------------------- */
+/*         GALLERY PAGE       */
+/* -------------------------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.07);
+}
+
+
+/* -------------------------- */
+/*       ALUMNI LIST PAGE     */
+/* -------------------------- */
+
+.names-list {
+    columns: 2;
+    padding-left: 20px;
+}
+
+.names-list li {
+    margin-bottom: 8px;
+}
+
+
+/* -------------------------- */
+/*        GURU PAGE           */
+/* -------------------------- */
+
+.teacher-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.teacher-card {
+    background: #e9f7ff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.teacher-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* -------------------------- */
+/*           FOOTER           */
+/* -------------------------- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #444;
+    margin-top: 40px;
+}
+
+
+/* -------------------------- */
+/*          DARK MODE         */
+/* -------------------------- */
+
+body.dark {
+    background: #0d1117;
+    color: #e6e6e6;
+}
+
+body.dark nav {
+    background: #0a0f14;
+}
+
+body.dark nav ul li a {
+    color: #ddd;
+}
+
+body.dark nav ul li a:hover,
+body.dark nav ul li a.active {
+    background: #1e2a36;
+}
+
+body.dark section {
+    background: #161b22;
+    color: #eee;
+}
+
+body.dark footer {
+    color: #ccc;
+}
+
+body.dark .teacher-card {
+    background: #11202e;
+    color: #eee;
+}
+
+body.dark .gallery img {
+    filter: brightness(0.8);
+}
+.about-dev {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about-dev img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-dev h3 {
+    margin-top: 10px;
+    color: #0165a3;
+}
+
+.about-dev ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+@media(max-width: 700px) {
+    .about-dev {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-dev img {
+        margin: auto;
+    }
+}
+
+body.dark .about-dev img {
+    filter: brightness(0.8);
+}

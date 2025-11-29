@@ -1,0 +1,9 @@
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px){
+    header, nav, section { padding: 10px; }
+    img { max-width: 100%; height: auto; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    .carousel img { width: 100%; }
+    .navbar, nav a { display:block; margin:8px 0; }
+}

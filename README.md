@@ -1,2 +1,0 @@
-# spemuwar-alumni
-web
